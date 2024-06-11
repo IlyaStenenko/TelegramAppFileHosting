@@ -9,4 +9,5 @@ public interface ConsumerService {
     void consumeDocMessageUpdates(Update update);
 
     void consumePhotoMessageUpdates(Update update);
+
 }

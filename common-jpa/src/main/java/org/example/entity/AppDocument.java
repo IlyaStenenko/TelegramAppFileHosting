@@ -7,12 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -31,6 +26,12 @@ public class AppDocument {
     private String telegramFileId;
 
     private String docName;
+
+    private Long userId;
+
+    private Long downloads;
+
+    private Boolean published;
 
     @OneToOne
     private BinaryContent binaryContent;

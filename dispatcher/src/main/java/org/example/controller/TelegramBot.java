@@ -1,7 +1,6 @@
 package org.example.controller;
 
 import lombok.extern.log4j.Log4j;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -18,7 +17,6 @@ public class TelegramBot extends TelegramLongPollingBot {
     private String botName;
     @Value("${bot.token}")
     private String botToken;
-    //(log4j)private static final Logger log = Logger.getLogger(TelegramBot.class);
     private UpdateController updateController;
 
     public TelegramBot(UpdateController updateController){

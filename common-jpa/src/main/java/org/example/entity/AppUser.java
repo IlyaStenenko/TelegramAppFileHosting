@@ -9,14 +9,9 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.example.entity.enums.UserState;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -46,6 +41,10 @@ public class AppUser {
     private String email;
 
     private Boolean isActive;
+
+    private String subscriptions;
+
+    private String expectInvitationToSubscribe;
 
     @Enumerated(EnumType.STRING)
     private UserState state;
